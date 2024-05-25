@@ -21,3 +21,4 @@ Daniel.peso = 65;
 Daniel.altura = 1.81;
 
 console.log(Daniel.get_info());
+console.log("Hello World")
