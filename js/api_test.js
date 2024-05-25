@@ -18,7 +18,7 @@ fetch(endpoint)
 
     hero_name.innerHTML = hero_data.name;
     hero_description.innerHTML = hero_data.description;
-    hero_portrait.src = 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/3429c394716364bbef802180e9763d04812757c205e1b4568bc321772096ed86.png';
+    hero_portrait.src = hero_data.portrait
     hero_role.innerHTML = "Role: " + hero_data.role;
     hero_location.innerHTML = "Location: " + hero_data.location;
     hero_birthday.innerHTML = "Birthday: " + hero_data.birthday;
