@@ -1,23 +1,37 @@
-const Jogo = {
+const endpoint = "https://overfast-api.tekrop.fr/heroes/ana";
+const ana_img = document.getElementById("ana_image");
+const ana_description = document.getElementById("ana_description");
 
-    // atributos
-    ano_de_lançamento: Number,
-    nome: String,
-    peso: Number,
-    altura: Number,
+fetch(endpoint)
+.then(res => res.json())
+.then(hero_data => {
 
-    // this == self in python
-    get_info: function() {
-        return `Nome: ${this.nome} \nIdade: ${this.idade} \nPeso: ${this.peso} \nAltura: ${this.altura}`;
-    }
+    ana_img.src = hero_data.portrait;
+    ana_description.innerHTML = hero_data.description;
+    
+})
 
-}
+const endpoint2 = "https://overfast-api.tekrop.fr/heroes/ashe";
+const ashe_img = document.getElementById("ashe_image");
+const ashe_description = document.getElementById("ashe_description");
 
-const overwatch = Jogo
+// TODO a imagem da Ashe não tá carregando
+fetch(endpoint2)
+.then(res => res.json())
+.then(hero_data => {
 
-Daniel.idade = 21;
-Daniel.nome = "Daniel Rodrigo";
-Daniel.peso = 65;
-Daniel.altura = 1.81;
+    ashe_img.src == hero_data.portrait;
+    ashe_description.innerHTML = hero_data.description;
+})
 
-console.log(Daniel.get_info());
+const endpoint3 = "https://overfast-api.tekrop.fr/heroes/baptiste";
+const baptiste_img = document.getElementById("baptiste_image");
+const baptiste_description = document.getElementById("baptiste_description");
+
+fetch(endpoint3)
+.then(res => res.json())
+.then(hero_data => {
+
+    baptiste_img.src = hero_data.portrait;
+    baptiste_description.innerHTML = hero_data.description
+})
