@@ -29,3 +29,16 @@ const brigitte_img = document.getElementById("brigitte_image");
 const brigitte_description = document.getElementById("brigitte_description");
 
 api_call(endpoint5, brigitte_img, brigitte_description);
+
+const endpoint6 = "https://overfast-api.tekrop.fr/heroes/cassidy";
+const cassidy_img = document.getElementById("cassidy_image");
+const cassidy_description = document.getElementById("cassidy_description");
+
+api_call(endpoint6, cassidy_img, cassidy_description);
+
+// TODO consertar o problema da requisição de api da Dva 
+//const endpoint7 = "https://overfast-api.tekrop.fr/heroes/dva";
+//const dva_img = document.getElementById("dva_image");
+//const dva_description = document.getElementById("dva_description");
+
+//api_call(endpoint7, dva_img, dva_description);
