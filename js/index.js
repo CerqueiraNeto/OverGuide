@@ -1,24 +1,19 @@
-const Jogo = {
+import { api_call } from "./api_handler.js";
 
-    // atributos
-    ano_de_lançamento: Number,
-    nome: String,
-    peso: Number,
-    altura: Number,
+const endpoint = "https://overfast-api.tekrop.fr/heroes/ana";
+const ana_img = document.getElementById("ana_image");
+const ana_description = document.getElementById("ana_description");
 
-    // this == self in python
-    get_info: function() {
-        return `Nome: ${this.nome} \nIdade: ${this.idade} \nPeso: ${this.peso} \nAltura: ${this.altura}`;
-    }
+api_call(endpoint, ana_img, ana_description);
 
-}
+const endpoint2 = "https://overfast-api.tekrop.fr/heroes/ashe";
+const ashe_img = document.getElementById("ashe_image");
+const ashe_description = document.getElementById("ashe_description");
 
-const overwatch = Jogo
+api_call(endpoint2, ashe_img, ashe_description);
 
-Daniel.idade = 21;
-Daniel.nome = "Daniel Rodrigo";
-Daniel.peso = 65;
-Daniel.altura = 1.81;
+const endpoint3 = "https://overfast-api.tekrop.fr/heroes/baptiste";
+const baptiste_img = document.getElementById("baptiste_image");
+const baptiste_description = document.getElementById("baptiste_description");
 
-console.log(Daniel.get_info());
-console.log("Hello World")
+api_call(endpoint3, baptiste_img, baptiste_description);
