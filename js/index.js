@@ -29,3 +29,10 @@ const brigitte_img = document.getElementById("brigitte_image");
 const brigitte_description = document.getElementById("brigitte_description");
 
 api_call(endpoint5, brigitte_img, brigitte_description);
+
+const endpoint6 = "https://overfast-api.tekrop.fr/heroes/cassidy";
+const cassidy_img = document.getElementById("cassidy_image");
+const cassidy_description = document.getElementById("cassidy_description");
+
+api_call(endpoint6, cassidy_img, cassidy_description);
+
