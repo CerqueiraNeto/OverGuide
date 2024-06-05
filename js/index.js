@@ -42,3 +42,5 @@ api_call(endpoint6, cassidy_img, cassidy_description);
 //const dva_description = document.getElementById("dva_description");
 
 //api_call(endpoint7, dva_img, dva_description);
+
+
