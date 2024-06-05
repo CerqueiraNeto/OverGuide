@@ -1,6 +1,6 @@
 import { api_call } from "./api_handler.js";
 
-const endpoint = "https://overfast-api.tekrop.fr/heroes/phara";
+const endpoint = "https://overfast-api.tekrop.fr/heroes/pharah";
 const hero_name = document.getElementById("hero_name");
 const hero_description = document.getElementById("hero_description");
 const hero_portrait = document.getElementById("hero_portrait");
