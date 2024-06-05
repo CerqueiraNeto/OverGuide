@@ -1,5 +1,4 @@
 import { api_call } from "./api_handler.js";
-let images = [];
 
 const hero_endpoint = "https://overfast-api.tekrop.fr/heroes"
 

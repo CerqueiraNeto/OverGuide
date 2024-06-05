@@ -14,7 +14,5 @@ export function api_call(endpoint, name, description, portrait, role, location, 
         location.innerHTML = "Location: " + hero_data.location;
         birthday.innerHTML = "Birthday: " + hero_data.birthday;
         age.innerHTML = "Age: " + hero_data.age;
-        
-
     })
 }
