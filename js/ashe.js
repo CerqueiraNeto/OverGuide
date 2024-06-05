@@ -1,5 +1,5 @@
 
-import { api_call } from "./api_handler";
+import { api_call } from "./api_handler.js";
 
 const endpoint = "https://overfast-api.tekrop.fr/heroes/ashe";
 const hero_name = document.getElementById("hero_name");
