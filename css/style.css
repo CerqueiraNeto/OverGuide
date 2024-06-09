@@ -1,7 +1,11 @@
 .game-image {
-    border: 1px solid red;
-    width: 256px;
-    height: 256px;
+    border: 1px solid white;
+    width: 200px;
+    height: 200px;
+}
+
+body {
+    background: linear-gradient(to right, rgb(108, 152, 233), white);
 }
 
 

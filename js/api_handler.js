@@ -1,7 +1,7 @@
 // Função para consumir a API OverFast. Evita repetição de códigos.
 // Parâmetros: o endpoint da api, o elemento html do portrato, o elemento html da descrição
 // Retorno: Nada
-export function api_call(endpoint, name, description, portrait, role, location, birthday, age) {
+export function api_call(endpoint, name, description, portrait, role, location, birthday, age, hitpoints) {
  
     fetch(endpoint)
     .then(res => res.json())
@@ -14,5 +14,6 @@ export function api_call(endpoint, name, description, portrait, role, location, 
         location.innerHTML = "Location: " + hero_data.location;
         birthday.innerHTML = "Birthday: " + hero_data.birthday;
         age.innerHTML = "Age: " + hero_data.age;
+        hitpoints.innerHTML = "Hitpoints: " + hero_data.hitpoints;
     })
 }
