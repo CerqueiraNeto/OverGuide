@@ -36,14 +36,17 @@ const weapon_video = document.getElementById("weapon_video");
 const ability1_name = document.getElementById("ability1_name");
 const ability1_desc = document.getElementById("ability1_desc");
 const ability1_icon = document.getElementById("ability1_icon");
+const ability1_video = document.getElementById("ability1_video");
 
 const ability2_name = document.getElementById("ability2_name");
 const ability2_desc = document.getElementById("ability2_desc");
 const ability2_icon = document.getElementById("ability2_icon");
+const ability2_video = document.getElementById("ability2_video");
 
 const ability3_name = document.getElementById("ability3_name");
 const ability3_desc = document.getElementById("ability3_desc");
 const ability3_icon = document.getElementById("ability3_icon");
+const ability3_video = document.getElementById("ability3_video");
 
 fetch(endpoint)
 .then(req => req.json())
@@ -69,13 +72,16 @@ fetch(endpoint)
     ability1_name.innerHTML = abilities[1].name;
     ability1_desc.innerHTML = abilities[1].description;
     ability1_icon.src = abilities[1].icon;
+    ability1_video.src = abilities[1].video.link.mp4;
 
     ability2_name.innerHTML = abilities[2].name;
     ability2_desc.innerHTML = abilities[2].description;
     ability2_icon.src = abilities[2].icon;
+    ability2_video.src = abilities[2].video.link.mp4;
 
     ability3_name.innerHTML = abilities[3].name;
     ability3_desc.innerHTML = abilities[3].description;
     ability3_icon.src = abilities[3].icon;
+    ability3_video.src = abilities[3].video.link.mp4;
 
 })
