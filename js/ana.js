@@ -31,6 +31,7 @@ const hero_age = document.getElementById("hero_age");
 const weapon_name = document.getElementById("weapon_name");
 const weapon_desc = document.getElementById("weapon_desc");
 const weapon_icon = document.getElementById("weapon_icon");
+const weapon_video = document.getElementById("weapon_video");
 
 const ability1_name = document.getElementById("ability1_name");
 const ability1_desc = document.getElementById("ability1_desc");
@@ -63,6 +64,7 @@ fetch(endpoint)
     weapon_name.innerHTML = abilities[0].name;
     weapon_desc.innerHTML = abilities[0].description;
     weapon_icon.src = abilities[0].icon;
+    weapon_video.src = abilities[0].video.link.mp4;
 
     ability1_name.innerHTML = abilities[1].name;
     ability1_desc.innerHTML = abilities[1].description;
