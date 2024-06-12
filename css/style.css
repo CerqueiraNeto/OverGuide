@@ -8,5 +8,7 @@ body {
     background: linear-gradient(to right, rgb(108, 152, 233), white);
 }
 
-
+ul {
+    list-style-type: none;
+}
 
