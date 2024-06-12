@@ -26,6 +26,7 @@ const hero_role = document.getElementById("hero_role");
 const hero_location = document.getElementById("hero_location");
 const hero_birthday = document.getElementById("hero_birthday");
 const hero_age = document.getElementById("hero_age");
+const hero_hitpoints = document.getElementById("hero_hitpoints");
 
 // habilidades
 const weapon_name = document.getElementById("weapon_name");
@@ -60,6 +61,13 @@ fetch(endpoint)
     hero_location.innerHTML = "Location: " + data.location;
     hero_birthday.innerHTML = "Birthday: " + data.birthday;
     hero_age.innerHTML = "Age: " + data.age;
+    hero_hitpoints.innerHTML = "Hitpoints: " +
+            `<ul>
+                <li>Armor: ${data.hitpoints.armor}</li>
+                <li>Health: ${data.hitpoints.health}</li>
+                <li>Shields: ${data.hitpoints.shields}</li>
+                <li>Total: ${data.hitpoints.total}</li>
+            </ul>`
 
     // habilidades
     const abilities = data.abilities;
