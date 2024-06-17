@@ -1,6 +1,9 @@
 import { api_call } from "./api_handler.js";
 
-const hero_endpoint = "https://overfast-api.tekrop.fr/heroes"
+const hero_endpoint = "https://overfast-api.tekrop.fr/heroes";
+const dmgBtn = document.getElementById("dmg_button");
+const supBtn = document.getElementById("sup_button");
+const tankBtn = document.getElementById("tank_button");
 
 // consumindo a api
 fetch(hero_endpoint)
@@ -17,3 +20,23 @@ fetch(hero_endpoint)
 
 })
 
+const filterDamage = () => {
+    // implementar isso aqui depois
+    console.log("Filtrar herois de dano");
+}
+
+
+const filterTank = () => {
+    // implementar isso aqui depois
+    console.log("Filtrar herois tanks");
+}
+
+
+const filterSupport = () => {
+    // implementar isso aqui depois
+    console.log("Filtrar herois de suporte");
+}
+
+dmgBtn.addEventListener("click", filterDamage);
+tankBtn.addEventListener("click", filterTank);
+supBtn.addEventListener("click", filterSupport);
