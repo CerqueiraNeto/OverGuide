@@ -28,6 +28,25 @@ const hero_birthday = document.getElementById("hero_birthday");
 const hero_age = document.getElementById("hero_age");
 const hero_hitpoints = document.getElementById("hero_hitpoints");
 
+//história
+
+const hero_summary = document.getElementById("summary");
+const story_video = document.getElementById("story_video");
+
+const chapter1_title = document.getElementById("chapter1_title");
+const chapter1_content = document.getElementById("chapter1_content");
+const chapter1_picture = document.getElementById("chapter1_picture");
+
+const chapter2_title = document.getElementById("chapter2_title");
+const chapter2_content = document.getElementById("chapter2_content");
+const chapter2_picture = document.getElementById("chapter2_picture");
+
+const chapter3_title = document.getElementById("chapter3_title");
+const chapter3_content = document.getElementById("chapter3_content");
+const chapter3_picture = document.getElementById("chapter3_picture");
+
+
+
 // habilidades
 const weapon_name = document.getElementById("weapon_name");
 const weapon_desc = document.getElementById("weapon_desc");
@@ -49,6 +68,8 @@ const ability3_desc = document.getElementById("ability3_desc");
 const ability3_icon = document.getElementById("ability3_icon");
 const ability3_video = document.getElementById("ability3_video");
 
+
+
 fetch(endpoint)
 .then(req => req.json())
 .then(data => {
@@ -68,6 +89,23 @@ fetch(endpoint)
                 <li>Shields: ${data.hitpoints.shields}</li>
                 <li>Total: ${data.hitpoints.total}</li>
             </ul>`
+    hero_summary.innerHTML = data.story.summary;
+    story_video.src = data.story.media.link;
+    
+    const chapters = data.story.chapters;
+
+    chapter1_title.innerHTML = chapters[0].title;
+    chapter1_content.innerHTML = chapters[0].content;
+    chapter1_picture.src = chapters[0].picture;
+
+    chapter2_title.innerHTML = chapters[1].title;
+    chapter2_content.innerHTML = chapters[1].content;
+    chapter2_picture.src = chapters[1].picture;
+
+    chapter3_title.innerHTML = chapters[2].title;
+    chapter3_content.innerHTML = chapters[2].content;
+    chapter3_picture.src = chapters[2].picture;
+
 
     // habilidades
     const abilities = data.abilities;
@@ -93,3 +131,6 @@ fetch(endpoint)
     ability3_video.src = abilities[3].video.link.mp4;
 
 })
+
+
+
