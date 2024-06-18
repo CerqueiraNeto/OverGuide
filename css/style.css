@@ -8,6 +8,11 @@ body {
     background: linear-gradient(to right, rgb(108, 152, 233), white);
 }
 
+.story img {
+    width: 320px;
+    height: 200px;
+}
+
 ul {
     list-style-type: none;
 }
