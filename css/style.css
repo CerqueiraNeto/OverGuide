@@ -4,11 +4,19 @@
     height: 256px;
 }
 
+.game-image:hover {
+    transform: scale(3);
+}
+
+body {
+    background: linear-gradient(to right, rgb(108, 152, 233), white);
+}
+
 #grid-container {
     display: grid;
     justify-content: center;
-    column-gap: 200px;
-    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto auto auto;
     padding: 10px;
 }
 
