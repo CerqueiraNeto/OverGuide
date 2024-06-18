@@ -31,7 +31,7 @@ const hero_hitpoints = document.getElementById("hero_hitpoints");
 //história
 
 const hero_summary = document.getElementById("summary");
-const story_video = document.getElementById("story_video");
+//const story_video = document.getElementById("story_video");
 
 const chapter1_title = document.getElementById("chapter1_title");
 const chapter1_content = document.getElementById("chapter1_content");
@@ -90,7 +90,8 @@ fetch(endpoint)
                 <li>Total: ${data.hitpoints.total}</li>
             </ul>`
     hero_summary.innerHTML = data.story.summary;
-    story_video.src = data.story.media.link;
+    console.log(data.story.media.link);
+    //story_video.src = data.story.media.link;
     
     const chapters = data.story.chapters;
 
