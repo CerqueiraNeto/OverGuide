@@ -91,6 +91,8 @@ fetch(endpoint)
             </ul>`
     hero_summary.innerHTML = data.story.summary;
     story_video.src = data.story.media.link;
+   
+    
     
     const chapters = data.story.chapters;
 
