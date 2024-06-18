@@ -1,11 +1,6 @@
 .game-image {
-    border: 1px solid black;
     width: 256px;
     height: 256px;
-}
-
-.game-image:hover {
-    transform: scale(3);
 }
 
 body {
@@ -23,6 +18,13 @@ body {
 .hero-item {
     padding: 10px;
     margin: 0px;
+    -webkit-transition-property: all; 
+    -webkit-transition-duration: 0.3s; 
+    -webkit-transition-timing-function: ease;
+}
+
+.hero-item:hover {
+    transform: scale(1.2);
 }
 
 #buttons {
