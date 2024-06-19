@@ -5,6 +5,7 @@ const dmgBtn = document.getElementById("dmg_button");
 const supBtn = document.getElementById("sup_button");
 const tankBtn = document.getElementById("tank_button");
 const allBtn = document.getElementById("all_button");
+const searchInput = document.getElementById("hero_search");
 
 // consumindo a api
 fetch(hero_endpoint)
@@ -21,6 +22,7 @@ fetch(hero_endpoint)
 
 })
 
+// filtragem de heróis
 const dmgHeroes = [
     "ashe", "bastion", "cassidy", "echo", "genji", "hanzo", "junkrat", "mei", "pharah", "reaper", "sojourn", "soldier-76", 
     "sombra", "symmetra", "torbjorn", "tracer", "venture", "widowmaker"
@@ -37,10 +39,8 @@ const tankHeroes = [
 
 const allHeroes = [...dmgHeroes, ...supHeroes, ...tankHeroes].sort();
 
-
 const filterDamage = () => {
-    // implementar isso aqui depois
-    console.log("Filtrar herois de dano");
+
     for (let i = 0; i < supHeroes.length; i++) {
         document.getElementById(`${supHeroes[i]}_div`).style.display = 'none';
     }
@@ -55,10 +55,8 @@ const filterDamage = () => {
    
 }
 
-
 const filterTank = () => {
-    // implementar isso aqui depois
-    console.log("Filtrar herois tanks");
+    
     for (let k = 0; k < dmgHeroes.length; k++) {
         document.getElementById(`${dmgHeroes[k]}_div`).style.display = 'none';
     }
@@ -72,10 +70,7 @@ const filterTank = () => {
     }
 }
 
-
 const filterSupport = () => {
-    // implementar isso aqui depois
-    console.log("Filtrar herois de suporte");
 
     for (let o = 0; o < dmgHeroes.length; o++) {
         document.getElementById(`${dmgHeroes[o]}_div`).style.display = 'none';
@@ -91,6 +86,7 @@ const filterSupport = () => {
 }
 
 const showAll = () => {
+
     for (let r = 0; r < allHeroes.length; r++) {
         document.getElementById(`${allHeroes[r]}_div`).style.display = 'block';
     }
@@ -100,3 +96,20 @@ dmgBtn.addEventListener("click", filterDamage);
 tankBtn.addEventListener("click", filterTank);
 supBtn.addEventListener("click", filterSupport);
 allBtn.addEventListener("click", showAll);
+
+// busca de heróis
+searchInput.addEventListener("input", (e) => {
+
+    const value = e.target.value.toLowerCase();
+    console.log(value);
+    for (let s = 0; s < allHeroes.length; s++) {
+        const isVisible = allHeroes[s].toLowerCase().includes(value)
+        
+        if (!isVisible) {
+            document.getElementById(`${allHeroes[s]}_div`).style.display = 'none';
+        } else {
+            document.getElementById(`${allHeroes[s]}_div`).style.display = 'block';
+        }
+        
+    }
+})
