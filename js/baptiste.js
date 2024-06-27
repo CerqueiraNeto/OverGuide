@@ -1,4 +1,4 @@
-import { api_call, Ability, Chapter, api_callv2} from "./api_handler.js";
+import { Ability, Chapter, api_callv2 } from "./api_handler.js";
 
 const endpoint = "https://overfast-api.tekrop.fr/heroes/baptiste";
 const hero_name = document.getElementById("hero_name");
