@@ -31,7 +31,6 @@ const hero_hitpoints = document.getElementById("hero_hitpoints");
 //história
 
 const hero_summary = document.getElementById("summary");
-//const story_video = document.getElementById("story_video");
 
 const chapter1_title = document.getElementById("chapter1_title");
 const chapter1_content = document.getElementById("chapter1_content");
@@ -91,7 +90,6 @@ fetch(endpoint)
             </ul>`
     hero_summary.innerHTML = data.story.summary;
     console.log(data.story.media.link);
-    //story_video.src = data.story.media.link;
     
     
     
@@ -136,4 +134,6 @@ fetch(endpoint)
 })
 
 
-
+//Modelo, que possa ser usado para todos os heróis.
+//Modelo que use for (usa html em js)
+//fecth em todos os heróis
