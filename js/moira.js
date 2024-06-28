@@ -1,4 +1,4 @@
-import { Ability, Chapter, api_callv2 } from "./api_handler.js"
+import { Ability, Chapter, api_callv2 } from "./api_handler.js";
 
 const endpoint = "https://overfast-api.tekrop.fr/heroes/moira";
 const hero_name = document.getElementById("hero_name");
@@ -11,6 +11,7 @@ const hero_age = document.getElementById("hero_age");
 const hero_hitpoints = document.getElementById("hero_hitpoints");
 
 api_call(endpoint, hero_name, hero_description, hero_portrait, hero_role, hero_location, hero_birthday, hero_age, hero_hitpoints);
+
 //história
 
 const hero_summary = document.getElementById("summary");
@@ -53,7 +54,6 @@ const ability3_desc = document.getElementById("ability3_desc");
 const ability3_icon = document.getElementById("ability3_icon");
 const ability3_video = document.getElementById("ability3_video");
 
-
 const weapon = new Ability(weapon_name, weapon_desc, weapon_icon, weapon_video);
 const ability1 = new Ability(ability1_name, ability1_desc, ability1_icon, ability1_video);
 const ability2 = new Ability(ability2_name, ability2_desc, ability2_icon, ability2_video);
@@ -63,3 +63,4 @@ const abilities = [weapon, ability1, ability2, ability3];
 
 api_callv2(endpoint, hero_name, hero_description, hero_portrait, hero_role, 
     hero_location, hero_birthday, hero_age, hero_hitpoints, hero_summary, chapters, abilities);
+
