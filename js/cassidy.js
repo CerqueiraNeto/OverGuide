@@ -10,8 +10,6 @@ const hero_birthday = document.getElementById("hero_birthday");
 const hero_age = document.getElementById("hero_age");
 const hero_hitpoints = document.getElementById("hero_hitpoints");
 
-api_call(endpoint, hero_name, hero_description, hero_portrait, hero_role, hero_location, hero_birthday, hero_age, hero_hitpoints);
-
 //história
 
 const hero_summary = document.getElementById("summary");
