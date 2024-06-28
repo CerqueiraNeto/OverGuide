@@ -5,6 +5,11 @@
 
 body {
     background: linear-gradient(to right, rgb(108, 152, 233), white);
+    font-family: 'Oswald', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Oswald', sans-serif;
 }
 
 .story img {
