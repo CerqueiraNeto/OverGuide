@@ -164,8 +164,26 @@ body {
 }
 
 #bio #hero_portrait {
+    width: 400px;
+    height: 400px;
+    display: inline;
+    border: 1px solid red;
+}
+
+#bio p { 
+    text-align: right;
+    border: 1px solid red;
+}
+
+#bio h3 {
+    text-align: right;
+    border: 1px solid red;
+}
+
+#bio-info {
+    text-align: left;
+    border: 1px solid red;
     width: 300px;
-    height: 300px;
     
 }
 
