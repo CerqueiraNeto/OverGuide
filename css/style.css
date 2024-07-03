@@ -103,3 +103,32 @@ ul {
     list-style-type: none;
     padding: 0;
 }
+
+#nav-links {
+    display: flex;
+    flex-direction: center; 
+    gap: 10px; 
+    margin-top: 10px;
+    align-items: center; 
+    padding: 10px; 
+    justify-content: center;
+}
+
+#nav-links .button {
+    background-color: hsl(186, 64%, 46%);
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+}
+
+#nav-links .button:hover {
+    text-decoration: underline;
+}
